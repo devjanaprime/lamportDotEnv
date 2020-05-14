@@ -1,6 +1,11 @@
 const express = require( 'express' );
 const app = express();
 const axios = require( 'axios' );
+const dotenv = require( 'dotenv' );
+dotenv.config();
+
+// test to see if GIPHY_API_KEY is available through dotenv
+console.log( 'GIPHY_API_KEY:', process.env.GIPHY_API_KEY );
 
 const port = process.env.PORT || 5000;
 
